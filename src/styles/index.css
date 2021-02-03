@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Noto+Sans+JP&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --small: 'Noto Sans JP', sans-serif;
+    --logo: 'Fira Sans', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+/* Header */
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+}
+
+.navlogo, .navlinks {
+    display: flex;
+}
+
+.navlogo {
+    flex: 1;
+    margin: auto;
+}
+
+.navlogo h1 {
+    font-family: var(--logo);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+.navlinks {
+    flex: 3;
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.navlinks li {
+    list-style: none;
+    margin: 0rem 2rem;
+    font-family: var(--small);
+}
+
+/* FirstSection */
+
+.firstsection {
+    padding: 8rem 3rem;
+    display: flex;
+}
+
+.firsttitle, .firstinfo {
+    flex: 1;
+    display: flex;
+    padding: 4rem;
+}
+
+.firsttitle {
+    justify-content: left;
+    margin: auto;
+}
+
+.firstinfo {
+    justify-content: left;
+}
+
+.firsttitle h1 {
+    font-family: var(--logo);
+    font-size: 5rem;
+    letter-spacing: 20px;
+}
+
+.firstinfo p {
+    font-family: var(--small);
+    font-size: 1.4rem;
+}
+
+/* SecondSection */
+
+.secondbox {
+     display: flex;
+     padding: 3rem 2rem;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.firstchildbox, .secondchildbox {
+    display: flex;
+    padding: 2rem 4rem;
+    margin: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.boxes {
+    margin: 0rem 3rem;
+    justify-content: center;
+}
+
+.boxes h2 {
+    font-family: var(--logo);
+    margin: 2rem;
+}
+
+.boxes p {
+    font-family: var(--small);
+}
+
+/* ThirdSection */
+
+.thirdbox {
+    padding: 5rem 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.thirdinfo {
+    padding: 5rem 2rem;
+}
+
+.thirdinfo p {
+    font-family: var(--small);
+    margin: 0.8rem;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.footerbox {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 1rem;
+}
+
+.footerlogo {
+    flex: 1;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerlogo h1 {
+    font-family: var(--logo);
+    text-align: center;
+}
+
+.footerlinks {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.footerlinks .links1 {
+    margin: 0rem 3rem;
+}
+
+.footerlinks .links1 li {
+    margin: 0.8rem;
+    font-family: var(--small);
+}
+
+.footerlinks .links1 li a {
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    font-family: var(--logo);
+    font-size: 1.2rem;
+}
+
+/* Media Q's */
+
+@media screen and (max-width: 1000px) {
+
+    /* first */
+
+    .firsttitle, .firstinfo {
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    .firsttitle h1 {
+        font-size: 8vw;
+    }
+
+    .firstinfo p {
+        font-size: 2.5vw;
+    }
+
+    /* second */
+
+    .firstchildbox, .secondchildbox {
+        padding: 1rem 2rem;
+        margin: 1rem;
+    }
+
+    .boxes {
+        margin: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .firstchildbox, .secondchildbox {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    /* first */
+
+    .firstsection {
+        flex-direction: column;
+        padding: 5rem 1rem;
+    }
+
+    .firsttitle{
+        padding: 3rem;
+        justify-content: center;
+        margin: auto;
+    } 
+
+    .firsttitle h1 {
+        font-size: 5rem;
+    }
+    
+    .firstinfo {
+        padding: 1rem;
+        justify-content: center;
+    }
+
+    .firstinfo p {
+        font-size: 1.2rem;
+    } 
+
+    /* third */
+
+    .thirdbox {
+        padding: 1rem 2rem;
+    }
+
+    .thirdinfo {
+        padding: 2rem 0rem;
+    }
+
+    .thirdinfo p {
+        margin: 3rem 0.5rem;
+    }
+
+    /* footer */
+
+    .footerbox {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .footerlinks .links1 {
+        margin: 2rem auto;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .navlinks {
+        margin: 0.5rem auto;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .firsttitle h1 {
+        font-size: 15vw;
+    }
+
+    .secondbox {
+        padding: 1rem 2rem;
+    }
+    
+    .boxes {
+        margin: 1rem 0;
+    }
+
+    .firstchildbox, .secondchildbox {
+        padding: 1rem 0rem;
+    }
+
+    .thirdbox {
+        padding: 1rem;
+    }
+
+    .thirdinfo {
+        padding: 1rem;
+    }
+
+}
+
+
+
+
+
